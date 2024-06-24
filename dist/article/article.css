@@ -23,6 +23,7 @@ body.vertical {
     --gray: #484644;
     --primary: #0078d4;
     --primary-alt: #004578;
+    --neutral-tertiary-alt: #f6f6f6;
 }
 @media (prefers-color-scheme: dark) {
     :root {
@@ -30,6 +31,7 @@ body.vertical {
         --gray: #a19f9d;
         --primary: #4ba0e1;
         --primary-alt: #65aee6;
+        --neutral-tertiary-alt: #2d333b;
     }
 }
 
@@ -126,14 +128,40 @@ article code {
     font-family: Monaco, Consolas, monospace;
     font-size: 0.875rem;
     line-height: 1;
+    background-color: var(--neutral-tertiary-alt);
+    padding: 0.2rem 0.4rem;
 }
 article pre {
     word-break: normal;
     overflow-wrap: normal;
     white-space: pre-wrap;
+    background-color: var(--neutral-tertiary-alt);
+    padding: 0.5rem;
+}
+article pre > code {
+    padding: 0;
+    background-color: transparent;
 }
 article blockquote {
     border-left: 2px solid var(--gray);
     margin: 1em 0;
-    padding: 0 40px;
+    padding: 10px 40px;
+    background-color: var(--neutral-tertiary-alt);
+}
+
+article table {
+    border-collapse: collapse;
+}
+article table th {
+    font-weight: 600;
+    background-color: var(--neutral-tertiary-alt);
+}
+article table,
+article table th,
+article table td {
+    border: 1px solid var(--gray);
+}
+article table th,
+article table td {
+    padding: 4px 8px;
 }
